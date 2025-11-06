@@ -12,7 +12,7 @@ export async function GET() {
   
 }
 
-// POST → cria nova mensagem
+// POST → cria nova mensagem msg
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
 
