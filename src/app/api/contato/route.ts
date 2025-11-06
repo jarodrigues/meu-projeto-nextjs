@@ -1,11 +1,11 @@
 import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const messages = await prisma.mensagem.findMany({
+  const messages = await prisma.message.findMany({
     orderBy: { createdAt: "desc" },
   });
 
-  return new Response(JSON.stringify(messages), {
+  return new Response(JSON.stringify(messages), {  
     status: 200,
     headers: { "Content-Type": "application/json" },
   });
@@ -16,7 +16,7 @@ export async function GET() {
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
 
-  const newMessage = await prisma.mensagem.create({
+  const newMessage = await prisma.message.create({
     data: { name, email, message },
   });
 
