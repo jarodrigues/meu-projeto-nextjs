@@ -1,24 +1,13 @@
-
 {
-  "build": {
-    "env": {
-      "PRISMA_GENERATE_SKIP_AUTOINSTALL": "true"
-    }
+  "buildCommand": "npx prisma generate --schema=./prisma/schema.prisma && next build",
+  "outputDirectory": ".next",
+  "env": {
+    "PRISMA_GENERATE_BINARY_TARGETS": "linux-musl-openssl-3.0.x"
   },
   "functions": {
     "api/**/*.js": {
-      "runtime": "nodejs18.x",
-      "memory": 1024,
-      "maxDuration": 10
-    },
-    "api/**/*.ts": {
-      "runtime": "nodejs18.x",
-      "memory": 1024,
+      "runtime": "nodejs20.x",
       "maxDuration": 10
     }
-  },
-  "env": {
-    "DATABASE_URL": "@database_url",
-    "NODE_ENV": "production"
   }
 }
