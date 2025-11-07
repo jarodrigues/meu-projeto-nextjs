@@ -1,13 +1,15 @@
 {
-  "buildCommand": "npx prisma generate --schema=./prisma/schema.prisma && next build",
-  "outputDirectory": ".next",
-  "env": {
-    "PRISMA_GENERATE_BINARY_TARGETS": "linux-musl-openssl-3.0.x"
-  },
+  "buildCommand": "npx prisma generate && next build",
   "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20",
-      "maxDuration": 10
+    "api/**/route.js": {
+      "runtime": "nodejs20.x"
+    },
+    "api/**/route.ts": {
+      "runtime": "nodejs20.x"
     }
+  },
+  "env": {
+    "PRISMA_CLI_QUERY_ENGINE_TYPE": "binary",
+    "PRISMA_GENERATE_BINARY_TARGETS": "linux-musl-openssl-3.0.x"
   }
 }
