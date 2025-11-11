@@ -1,7 +1,7 @@
 generator client {
   provider = "prisma-client-js"
+  binaryTargets = ["rhel-openssl-3.0.x"]
 }
-
 
 datasource db {
   provider = "postgresql"
@@ -10,8 +10,8 @@ datasource db {
 
 model Message {
   id        Int      @id @default(autoincrement())
-  name      String   
+  name      String   @map("nome")
   email     String?
-  message   String   
+  message   String   @map("mensagem")
   createdAt DateTime @default(now())
 }

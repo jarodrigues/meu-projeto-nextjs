@@ -5,14 +5,12 @@ export async function GET() {
     orderBy: { createdAt: "desc" },
   });
 
-  return new Response(JSON.stringify(messages), {  
+  return new Response(JSON.stringify(messages), {
     status: 200,
     headers: { "Content-Type": "application/json" },
   });
-  
 }
 
-// POST → cria nova mensagem msg
 export async function POST(req: Request) {
   const { name, email, message } = await req.json();
 
