@@ -20,7 +20,7 @@ export default function Header() {
                         Sobre
                     </Link>
                     <Link href="/mensagens" className="hover:text-blue-400 transition">
-                        Atualizar
+                        Mensagens
                     </Link>
                     <Link href="/contato" className="hover:text-blue-400 transition">
                         Contato
