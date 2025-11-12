@@ -28,7 +28,7 @@ export default function Home() {
       {/* Ilustração */}
       <div className="flex-1 flex justify-center">
         <Image
-            src="/images/hero.svg"
+            src="../images/hero.svg"
             alt="Ilustração: configuração de site"
             width={384}       // ajusta conforme o arquivo
             height={320}      // ajusta conforme o arquivo

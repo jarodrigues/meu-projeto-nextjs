@@ -16,7 +16,7 @@ export function Form({ onNewMessage }: FormProps) {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/contato", {
+      const res = await fetch("/api/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message }),

@@ -20,7 +20,7 @@ export default function MenssagensPage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/contato");
+      const res = await fetch("/api/message");
       if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
       const data = await res.json();
       setMessages(Array.isArray(data) ? data : []);

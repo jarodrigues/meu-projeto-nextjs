@@ -14,15 +14,10 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 
   return (
     <html lang="en">
-      {/* <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body> */}
       <body className="antialiased bg-gray-100 text-gray-800">
         <Header />
         <main className="max-w-6xl mx-auto p-6 min-h-[70vh]">{children}</main>
-        <Toaster position="top-right" reverseOrder={false} />
+        <Toaster position="top-center" reverseOrder={false} />
         <Footer />
       </body>
 
